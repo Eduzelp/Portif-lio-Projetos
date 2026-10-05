@@ -1,0 +1,478 @@
+/* Configurações gerais */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  background: linear-gradient(135deg, #f6f3eb, #e3ece5);
+  color: #243c32;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid #8bb39a;
+  outline-offset: 4px;
+}
+
+
+
+.Card {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 30px 28px;
+
+  background-color: #fffefa;
+  border: 1px solid #373e35;
+  border-top: 5px solid #000a05;
+  border-radius: 20px;
+
+  text-align: center;
+  box-shadow: 0 18px 50px rgba(36, 60, 50, 0.12);
+}
+
+#title {
+  margin: 0 0 32px;
+
+  color: #0c1e16;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+/* Botão para gerar o código */
+
+#gerar {
+  width: 100%;
+  min-height: 50px;
+  padding: 14px 20px;
+
+  background-color: #042b19;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+#gerar:hover {
+  background-color: #2b523e;
+  box-shadow: 0 5px 14px rgba(36, 71, 53, 0.18);
+}
+
+/*sempre que tu quiser ponhar uma cor quando ele for ativado*/
+#gerar:active {
+  background-color: #000000;
+}
+
+/* Código gerado */
+
+#gerado {
+  min-height: 78px;
+  margin: 22px 0;
+  padding: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #d3d4d2;
+  color: rgb(0, 0, 0);
+  border: 1px dashed #000000;
+  border-radius: 10px;
+
+  font-family: Consolas, monospace;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 6px;
+}
+
+/* Campo para digitar o código */
+
+#verificar {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px;
+
+  background-color: #ffffff;
+  color: #243c32;
+  border: 1px solid #cdd6cb;
+  border-radius: 10px;
+
+  font-size: 16px;
+  text-align: center;
+
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#verificar::placeholder {
+  color: #747f75;
+}
+
+#verificar:hover {
+  border-color: #8fa591;
+}
+
+#verificar:focus {
+  outline: none;
+  border-color: #315b47;
+  box-shadow: 0 0 0 4px rgba(49, 91, 71, 0.12);
+}
+
+/* Mensagem de erro */
+
+#erro {
+  display: block;
+  min-height: 20px;
+  margin-top: 16px;
+
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+#oculto {
+  padding: 12px 18px;
+
+  background-color: #f0f4ed;
+  color: #315b47;
+  border: 1px solid #cdd6cb;
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+/* Cartões da página principal */
+
+.info-central,
+.info-2 {
+  width: 100%;
+  max-width: 650px;
+  padding: 30px 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(36, 50, 74, 0.12);
+}
+
+.info-central {
+  background: linear-gradient(135deg, #ffffff, #d4f9fa);
+  color: #24324a;
+}
+
+.info-2 {
+  min-height: 180px;
+  background: linear-gradient(130deg, #d9f5fc, #ffffff);
+  color: #24324a;
+}
+
+.icone {
+  font-size: 50px;
+}
+
+.info-central h1,
+.info-central h2,
+.info-2 h3,
+.info-2 h6 {
+  margin: 0;
+}
+
+.info-central h1 {
+  color: #315b8a;
+}
+
+.info-central h2 {
+  color: #64748b;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.info-2 h3 {
+  color: #315b8a;
+  font-size: 21px;
+}
+
+.info-2 h6 {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.info-central a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+/* Botão Explorar */
+
+#Explor {
+  min-width: 120px;
+  min-height: 50px;
+  padding: 12px 24px;
+
+  background-color: #4f5fe0;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+#Explor:hover {
+  background-color: #3949c7;
+  box-shadow: 0 5px 15px rgba(79, 95, 224, 0.25);
+}
+
+/* Janela de confirmação */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+  max-width: 340px;
+  padding: 28px;
+
+  background-color: #fffefa;
+  color: #24324a;
+  border: 1px solid #dce3da;
+  border-radius: 16px;
+
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+#continuar,
+#cancelar {
+  min-height: 46px;
+  margin: 5px;
+  padding: 12px 18px;
+
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: background-color 0.2s;
+}
+
+#continuar {
+  background-color: #315b47;
+}
+
+#continuar:hover {
+  background-color: #244735;
+}
+
+#cancelar {
+  background-color: #bd4141;
+}
+
+#cancelar:hover {
+  background-color: #9f3030;
+}
+
+/* Outros elementos da página */
+
+#hasy23has {
+  padding: 14px;
+
+  background-color: #ffffff;
+  color: #24324a;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(36, 50, 74, 0.08);
+}
+
+#like,
+.like {
+  min-height: 34px;
+  padding: 7px 14px;
+
+  background-color: #fbe4e4;
+  color: #a52e3d;
+  border: 1px solid #edb9bf;
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: background-color 0.2s;
+}
+
+#like:hover,
+.like:hover {
+  background-color: #f4cbd0;
+}
+
+/* Botão de modo escuro */
+
+#mode {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 5;
+
+  width: 50px;
+  height: 50px;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #24324a;
+  color: #ffffff;
+  border: 1px solid #40516c;
+  border-radius: 50%;
+
+  font-size: 24px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 0.2s;
+}
+
+#mode:hover {
+  background-color: #3a4b65;
+}
+
+/* Cores do modo escuro */
+
+body.dark {
+  background: #151b19;
+  color: #e7eee9;
+}
+
+body.dark .Card,
+body.dark .info-central,
+body.dark .info-2,
+body.dark .popup {
+  background: #202a25;
+  color: #e7eee9;
+  border-color: #3a4b40;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .Card {
+  border-top-color: #8bb39a;
+}
+
+body.dark #title,
+body.dark .info-central h1,
+body.dark .info-2 h3 {
+  color: #e7eee9;
+}
+
+body.dark .info-central h2,
+body.dark .info-2 h6 {
+  color: #b3c4b8;
+}
+
+body.dark #gerado,
+body.dark #oculto {
+  background-color: #29382f;
+  color: #c0dfc9;
+  border-color: #526c59;
+}
+
+body.dark #verificar {
+  background-color: #18211c;
+  color: #e7eee9;
+  border-color: #526c59;
+}
+
+body.dark #verificar::placeholder {
+  color: #a4b7a9;
+}
+
+body.dark #verificar:focus {
+  border-color: #8bb39a;
+  box-shadow: 0 0 0 4px rgba(139, 179, 154, 0.15);
+}
+
+body.dark #hasy23has {
+  background-color: #29382f;
+  color: #e7eee9;
+  border-color: #3a4b40;
+}
+
+body.dark #mode {
+  background-color: #edcd78;
+  color: #302817;
+  border-color: #edcd78;
+}
+
+body.dark #mode:hover {
+  background-color: #f5dc98;
+}
+
+/* Ajustes para celular */
+
+@media (max-width: 420px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  .Card {
+    padding: 32px 22px 24px;
+  }
+
+  #title {
+    font-size: 27px;
+  }
+
+  .info-central,
+  .info-2 {
+    padding: 24px 18px;
+  }
+}
+
+body.login {
+  background-image: url("fundo-login.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
